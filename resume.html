@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<head>
+<link href="css/stylesheet.css" id = "pagestyle" rel="stylesheet">
+
+<meta charset="utf-8">
+<title>Resume</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet"  href="https://fonts.googleapis.com/css?family=Montserrat">
+
+</head>
+
+<body id = "main">
+
+	<div class = "sidebar" id = "sidebar">
+	
+	<div class = "headshot">
+	  <!--headshot-->
+	 </div>
+	 <div class = "sidebar-d" id = "sbc">
+	 <h1 class = "sidebar-text">Z Akerele</h1>
+	 <h3>Web Developer /  Programmer</h3>
+	 
+
+	<div> </div>
+	<div class = "sidebar-link" href = "mailto:zylith.ake@gmail.com">
+		<a href = "mailto:zylith.ake@gmail.com" class = "em" >Send an email</a>
+		
+	
+	</div>
+
+
+	<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">☰ Close Sidebar</a>
+ </div>
+
+	</div>
+	
+	<div class = "navbar" id = "navbar">
+		<a  onclick="drkMode()" id = "dark" class = "drkbtn"><img  src = "img/moon.png" class = "moon" style = "height:70px"></a>
+		<a class = "navbar-item" href = "index.html">Home</a>
+		<a class = "navbar-item" href = "resume.html">Resume</a>
+		<a class = "navbar-item"href = "projects.html">Projects</a>
+	</div>
+	<div class = "header" id = "header">
+		<h1 class = "header-text" >Resume</h1>
+	</div>
+	<div class = "content"> 
+	<button class="openbtn" onclick="openNav()" id = "open">☰ Open Sidebar</button>
+ <object data="resumedl.pdf" type="application/pdf" width="90%" height="1000px" class = "resume" >
+      <p>Unable to display PDF file. <a href="resumedl.pdf">Download</a> instead.</p>
+			
+	</div>
+	<script src="scripts/main.js"></script>
+</body>
+<script>
+    var navbar = document.getElementById("navbar");
+	var isopen = true;
+	  var barc = document.getElementById("sbc");
+	var sidebar = document.getElementById("sidebar");
+	var open = document.getElementById("open");
+	open.classList.add("hider");
+	  var header = document.getElementById("header");
+	  var dark = document.getElementById("dark");
+function openNav() {
+
+  document.getElementById("sidebar").style.width = "15.1%";
+header.classList.remove("header-full");
+open.style.marginLeft = "0";
+  navbar.classList.remove("navbar-full");
+	barc.classList.remove("hider");
+	open.classList.add("hider");
+	dark.classList.remove("drkbtnmove");
+}
+
+function closeNav() {
+  document.getElementById("sidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+	navbar.classList.add("navbar-full");
+open.style.marginLeft = "-15.1%";
+barc.classList.add("hider");
+open.classList.remove("hider");
+header.classList.add("header-full");
+dark.classList.add("drkbtnmove");
+}
+var isDark = false;
+function drkMode() {
+if (isDark) {
+     document.getElementById("pagestyle").setAttribute("href", "css/stylesheet.css"); 
+isDark = false;
+}
+else {
+document.getElementById("pagestyle").setAttribute("href", "css/drkmode.css"); 
+isDark = true;
+}
+}
+
+
+</script>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<head>
+<link href="css/stylesheet.css" id = "pagestyle" rel="stylesheet">
+
+<meta charset="utf-8">
+<title>Z Akerele</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet"  href="https://fonts.googleapis.com/css?family=Montserrat">
+
+</head>
+
+<body id = "main">
+
+	<div class = "sidebar" id = "sidebar">
+	
+	<div class = "headshot">
+	  <!--headshot-->
+	 </div>
+	 <div class = "sidebar-d" id = "sbc">
+	 <h1 class = "sidebar-text">Z Akerele</h1>
+	 <h3>Web Developer /  Programmer</h3>
+	 
+
+	<div> </div>
+	<div class = "sidebar-link" href = "mailto:zylith.ake@gmail.com">
+		<a href = "mailto:zylith.ake@gmail.com" class = "em" >Send an email</a>
+		
+	
+	</div>
+
+
+	<a class="closebtn" onclick="closeNav()">☰ Close Sidebar</a>
+ </div>
+
+	</div>
+	
+	<div class = "navbar" id = "navbar">
+		<a  onclick="drkMode()" id = "dark" class = "drkbtn"><img  src = "img/moon.png" class = "moon" style = "height:70px"></a>
+		<a class = "navbar-item" href = "index.html">Home</a>
+		<a class = "navbar-item" href = "resume.html">Resume</a>
+		<a class = "navbar-item"href = "projects.html">Projects</a>
+	</div>
+	<div class = "header" id = "header">
+		<h1 class = "header-text" >Home</h1>
+	</div>
+	<div class = "content"> 
+	<div class = "home-obj-wide">
+			<h2 class = "hometxt">About Me</h2>
+			<div style = "margin-bottom:100px;">
+			<h3 style = "line-height: 30px;" class = "abouttxt">I currently live in Los Angeles with my wife<p></p>
+			and 2 cats. In my free time I enjoy video games,<p></p> trading card games, and crochet.<p>
+			</div>
+				</p></h3><h3 style = "font-size:1.4em;" class = "abouttxt">Currently looking for jobs in: <p></p></h3><h3 class = "abouttxt"> Game Development<p></p> Web Development<p></p> Cybersecurity</h3>
+		</div>
+	    <button class="openbtn" onclick="openNav()" id = "open">☰ Open Sidebar</button>
+		<div class = "home-obj">
+		<h2 class = "hometxt">Education</h2>
+		<div style = "display:flex; margin-bottom: 20px;">
+			<div>
+			<img src = "img/simmons.jpg" style = "border-radius: 30px;">
+			
+			
+			
+			</div>
+			<div style = "margin-left:10px; margin-top:-25px;">
+			<h3 style = "font-size: 1.4em; line-height:20px;">Simmons University</h3>
+			<h3>Bachelor's of Science</h3>
+			<h3>Computer Science</h3>
+			<h4>2022-Present</h4>
+			</div>
+			</div>
+			<div style = "display:flex; margin-bottom: 20px;">
+			<div>
+			<img src = "img/bu.webp" style = "border-radius: 20px;">
+			
+			
+			
+			</div>
+			<div style = "margin-left:24px;margin-top:-25px;">
+			<h3 style = "font-size: 1.4em; line-height:20px;">Boston University</h3>
+			<h3>Bachelor's of Science</h3>
+			<h3>Environmental Analysis</h3>
+			<h4>2019-2021</h4>
+			</div>
+			</div>
+			<div style = "display:flex; margin-bottom: 20px;">
+			<div>
+			<img src = "img/uop.png" style = "border-radius: 20px;">
+			
+			
+			
+			</div>
+			<div style = "margin-left:40px;margin-top:-25px;">
+			<h3 style = "font-size: 1.4em; line-height:20px;">University of the Pacific</h3>
+			<h3>Bachelor's of Science</h3>
+			<h3>Computer Science</h3>
+			<h4>2017-2019</h4>
+			</div>
+			</div>
+		</div>
+		
+		<div class = "home-obj-small">
+			<h2 class = "hometxt-mid">Skills</h2>
+			<div class = "imgbox">
+			<img src = "img/figma-logo.png" alt = "Figma" class = "s-img" title = "Figma">
+			<img src = "img/java.png"alt = "Java" class = "s-img"title = "Java">
+			<img src = "img/c-logo.png" alt = "C++" class = "s-img"title = "C++">
+			<img src = "img/rlog.webp" alt = "R/Rstudio" style = "border-radius: 40px;" class = "s-img" title = "R/Rstudio">
+			<img src = "img/htmllog.png" alt = "html"  class = "b-img" title ="HTML">
+			<img src = "img/csslog.png" alt = "CSS" class = "s-img" title ="CSS">
+			<img src = "img/plog.png" alt = "Python" class = "s-img" title = "Python">
+			<img src = "img/sql.png" alt = "SQL" class = "s-img" title = "SQL">
+			<img src = "img/js.png" alt = "javaScript" class = "s-img" title = "JavaScript" style = "border-radius: 10px;" >
+			</div>
+		</div>
+
+		
+
+
+			
+	</div>
+	<script src="scripts/main.js"></script>
+</body>
+<script>
+    var navbar = document.getElementById("navbar");
+	var isopen = true;
+	  var barc = document.getElementById("sbc");
+	var sidebar = document.getElementById("sidebar");
+	var open = document.getElementById("open");
+	open.classList.add("hider");
+	  var header = document.getElementById("header");
+	  var dark = document.getElementById("dark");
+function openNav() {
+
+  document.getElementById("sidebar").style.width = "15.1%";
+header.classList.remove("header-full");
+open.style.marginLeft = "0";
+  navbar.classList.remove("navbar-full");
+	barc.classList.remove("hider");
+	open.classList.add("hider");
+	dark.classList.remove("drkbtnmove");
+}
+
+function closeNav() {
+  document.getElementById("sidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+	navbar.classList.add("navbar-full");
+open.style.marginLeft = "-15.1%";
+barc.classList.add("hider");
+open.classList.remove("hider");
+header.classList.add("header-full");
+dark.classList.add("drkbtnmove");
+}
+var isDark = false;
+function drkMode() {
+if (isDark) {
+     document.getElementById("pagestyle").setAttribute("href", "css/stylesheet.css"); 
+isDark = false;
+}
+else {
+document.getElementById("pagestyle").setAttribute("href", "css/drkmode.css"); 
+isDark = true;
+}
+}
+
+
+</script>
+</html>
